@@ -1,0 +1,192 @@
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f1e8;
+    color: #333333;
+}
+
+/* Encabezado */
+.encabezado {
+    text-align: center;
+    padding: 50px 20px 35px;
+}
+
+.subtitulo {
+    color: #63804a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.encabezado h1 {
+    color: #243b2a;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.descripcion {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* Contenedor de las tarjetas */
+.contenedor-testimonios {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+.foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+/* Diseño de cada tarjeta */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #00000012;
+    border: 1px solid #e5e0d5;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px #00000020;
+}
+
+/* Tarjeta destacada */
+.tarjeta-destacada {
+    background-color: #243b2a;
+    color: #ffffff;
+}
+
+.tarjeta-destacada .ocupacion {
+    color: #d9e2d4;
+}
+
+.tarjeta-destacada .opinion {
+    color: #f5f1e8;
+}
+
+.tarjeta-destacada .etiqueta {
+    display: inline-block;
+    background-color: #c58b45;
+    color: #ffffff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Información de la persona */
+.informacion-persona {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.informacion-persona h2 {
+    font-size: 17px;
+    margin: 0 0 6px;
+}
+
+.ocupacion {
+    font-size: 13px;
+    color: #777777;
+    margin: 0;
+}
+
+/* Círculos con iniciales */
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.avatar-verde {
+    background-color: #dce8d5;
+    color: #243b2a;
+}
+
+.avatar-naranja {
+    background-color: #f5dfc2;
+    color: #8a4c16;
+}
+
+.avatar-azul {
+    background-color: #dce7f1;
+    color: #315777;
+}
+
+.avatar-cafe {
+    background-color: #e8d8ca;
+    color: #69452f;
+}
+
+/* Texto del testimonio */
+.opinion {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555555;
+    margin: 0;
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    padding: 30px 15px;
+    color: #666666;
+    font-size: 13px;
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 900px) {
+    .contenedor-testimonios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .encabezado h1 {
+        font-size: 30px;
+    }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .contenedor-testimonios {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .encabezado {
+        padding: 35px 20px 20px;
+    }
+
+    .encabezado h1 {
+        font-size: 26px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+}
